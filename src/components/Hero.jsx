@@ -2,8 +2,8 @@
 import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
-import Lottie from 'react-lottie'
-import animationData from '../../public/Animation - 1724922008020.json'
+import Lottie from "react-lottie";
+import animationData from "../../public/Animation - 1724922008020.json";
 
 const Hero = () => {
   const defaultOptions = {
@@ -11,15 +11,15 @@ const Hero = () => {
     autoplay: true,
     animationData: animationData,
     rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice"
-    }
+      preserveAspectRatio: "xMidYMid slice",
+    },
   };
   return (
     <section id="hero" className="w-full flex items-center justify-center ">
       <motion.div
         className="md:w-[40%] md:pl-16 mt-16"
         initial={{ opacity: 0, x: -200 }}
-        animate={{ opacity: 1, x: 0 }}
+        whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 1 }}
       >
         <h1 className="font-black text-[60px] text-[#242d4b] mb-5 ">
@@ -34,16 +34,13 @@ const Hero = () => {
           Hire me
         </button>
       </motion.div>
-      <motion.div className="md:w-[60%] flex items-center justify-center"
-          initial={{ opacity: 0, x: 200 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1 }}
+      <motion.div
+        className="md:w-[60%] flex items-center justify-center"
+        initial={{ opacity: 0, x: 200,rotateX:0 }}
+        whileInView={{ opacity: 1, x: 0 ,rotateY:360}}
+        transition={{ duration: 1.5 }}
       >
-        <Lottie 
-	    options={defaultOptions}
-        height={400}
-        width={400}
-      />
+        <Lottie options={defaultOptions} height={400} width={400} />
       </motion.div>
     </section>
   );

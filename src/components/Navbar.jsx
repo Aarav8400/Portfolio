@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 const Navbar = () => {
   return (
     <motion.div
-      className="bg-white p-7 m-5 rounded-lg"
+      className="bg-white p-7 m-5 rounded-lg sticky"
       initial={{ opacity: 0, y: -200 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1 }}
