@@ -15,7 +15,7 @@ const Why = () => {
   return (
     <section
       id="why"
-      className="w-full flex flex-col items-center justify-center relative "
+      className="w-full flex flex-col items-center justify-center relative mt-24"
     >
       <div className="flex ">
         <motion.div

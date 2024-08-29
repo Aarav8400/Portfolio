@@ -1,3 +1,4 @@
+import CTA from "@/components/CTA";
 import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
 import Project from "@/components/Project";
@@ -13,6 +14,7 @@ export default function Home() {
       <Why />
       <Solution />
       <Project />
+      <CTA />
     </section>
   );
 }
