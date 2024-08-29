@@ -2,8 +2,18 @@
 import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
+import Lottie from 'react-lottie'
+import animationData from '../../public/Animation - 1724922008020.json'
 
 const Hero = () => {
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: animationData,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice"
+    }
+  };
   return (
     <section id="hero" className="w-full flex items-center justify-center ">
       <motion.div
@@ -29,7 +39,11 @@ const Hero = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
       >
-        <Image src={"/dash.png"} alt="hello" width={500} height={300} />
+        <Lottie 
+	    options={defaultOptions}
+        height={400}
+        width={400}
+      />
       </motion.div>
     </section>
   );
