@@ -2,7 +2,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Lottie from "react-lottie";
-import animationData from "../../public/Animation - 1724922008020.json";
+import animationData from "../../public/Animation - 1724985759809.json";
 
 const Solution = () => {
   const defaultOptions = {
@@ -14,7 +14,10 @@ const Solution = () => {
     },
   };
   return (
-    <section id="solution" className="w-full flex items-center justify-center ">
+    <section
+      id="solution"
+      className="w-full flex items-center justify-center mt-14 "
+    >
       <motion.div
         className="md:w-[40%] flex items-center justify-center"
         initial={{ opacity: 0, x: -200, rotateX: 0 }}

@@ -20,7 +20,7 @@ const Hero = () => {
         className="md:w-[40%] md:pl-16 mt-16"
         initial={{ opacity: 0, x: -200 }}
         whileInView={{ opacity: 1, x: 0 }}
-        transition={{ duration: 1 }}
+        transition={{ duration: 1.5 }}
       >
         <h1 className="font-black text-[60px] text-[#242d4b] mb-5 ">
           Hy! I Am Vikas Dev{" "}
