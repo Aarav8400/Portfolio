@@ -8,7 +8,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <section className="px-24">
+    <section className="px-4 md:w-[90vw] overflow-x-hidden mx-auto">
       <Navbar />
       <Hero />
       <Why />

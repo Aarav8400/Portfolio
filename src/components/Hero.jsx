@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
 import Lottie from "react-lottie";
@@ -15,15 +14,18 @@ const Hero = () => {
     },
   };
   return (
-    <section id="hero" className="w-full flex items-center justify-center ">
+    <section
+      id="hero"
+      className="w-full flex flex-col-reverse md:flex-row items-center justify-center "
+    >
       <motion.div
-        className="md:w-[40%] md:pl-16 mt-16"
+        className="max-w-[400px] w-[80vw] md:w-[40%] md:pl-12 mt-16"
         initial={{ opacity: 0, x: -200 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 1.5 }}
       >
-        <h1 className="font-black text-[60px] text-[#242d4b] mb-5 ">
-          Hy! I Am Vikas Dev{" "}
+        <h1 className="font-black text-[25px] sm:text-[30px] md:text-[40px] text-[#242d4b] mb-5 ">
+          Hy! I Am Vikas Dev 👋🏻{" "}
         </h1>
         <p className="font-normal mb-10 text-[#63636b]">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
@@ -36,11 +38,13 @@ const Hero = () => {
       </motion.div>
       <motion.div
         className="md:w-[60%] flex items-center justify-center"
-        initial={{ opacity: 0, x: 200,rotateX:0 }}
-        whileInView={{ opacity: 1, x: 0 ,rotateY:360}}
+        initial={{ opacity: 0, x: 200, }}
+        whileInView={{ opacity: 1, x: 0,  }}
         transition={{ duration: 1.5 }}
       >
-        <Lottie options={defaultOptions} height={400} width={400} />
+        <div className="hidden md:block">
+          <Lottie options={defaultOptions} height={400} width={400} />
+        </div>
       </motion.div>
     </section>
   );
